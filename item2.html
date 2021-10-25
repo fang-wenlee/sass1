@@ -1,107 +1,114 @@
 <html lang="en-US">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Simple Responsive Layout</title>
-        <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
-        <script type="text/javascript" src="js/site/jquery-3.4.1.min.js"></script>
-		<script src="js/site/base.min.js"></script>
-     
-     	<!-- add icon -->
-         <link rel="shortcut icon" href="../images/site/favicon.ico" type="image/x-icon">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Simple Responsive Layout</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="css/style.css"
+    />
+    <script type="text/javascript" src="js/site/jquery-3.4.1.min.js"></script>
+    <script src="js/site/base.min.js"></script>
 
-        
-<style>
+    <!-- add icon -->
+    <link
+      rel="shortcut icon"
+      href="../images/site/favicon.ico"
+      type="image/x-icon"
+    />
 
-@media screen and (min-width: 650px){
-        .flex-container { display: flex;} 
-        .price-box{ display: flex;  } 
-}
+    <style>
+      @media screen and (min-width: 650px) {
+        .flex-container {
+          display: flex;
+        }
+        .price-box {
+          display: flex;
+        }
+      }
+    </style>
+  </head>
 
-
- </style>
-    </head>
-
-    <body>
-    <div id="basket"><a class="cart">Basket (Qty: <span id="mini_qty"> 0 </span> Sub Total: <span id="mini_total" > 0</span>)</a></div>		
+  <body>
+    <div id="basket">
+      <a class="cart"
+        >Basket (Qty: <span id="mini_qty"> 0 </span> Sub Total:
+        <span id="mini_total"> 0</span>)</a
+      >
+    </div>
     <div class="overlay"></div>
 
-    <section class="mini-basket-box">  
-        <div class="close-basket-btn">
-                 <a id="close-basket" href="#"> X</a>  
-                </div> 
-                 <div id="title"> Shopping Cart</div>
-                <div class="container">
-                
-                </div>	
+    <section class="mini-basket-box">
+      <div class="close-basket-btn">
+        <a id="close-basket" href="#"> X</a>
+      </div>
+      <div id="title">Shopping Cart</div>
+      <div class="container"></div>
     </section>
-    
-    
-    <header id="navigation" ></header>
 
+    <header id="navigation"></header>
 
     <!-- Main Content -->
     <main class="product-page">
-        <div class="flex-container wrapper prod-flex-container">
+      <div class="flex-container wrapper prod-flex-container">
+        <!-- Content -->
+        <section class="content item img-detail-col">
+          <div id="img-container"></div>
+        </section>
 
-            <!-- Content -->
-            <section class="content item img-detail-col">
-                
-                <div id="img-container"></div>
-                                
-            </section>
+        <!-- Sidebar -->
+        <aside class="sidebar item prod-detail-col">
+          <div class="prod-detail-box" id="prod-box"></div>
 
-            <!-- Sidebar -->
-            <aside class="sidebar item  prod-detail-col">
-                
-                
-                <div class="prod-detail-box" id="prod-box"></div>
-    
-                <div class="add-to-basket-container">
-                    <!-- ************************************************ -->
-                    <form method="get" class="basket_add">
-                    
-                    <input type="hidden"  name="miniBasket" id="miniBasket"  />
-                    <input type="hidden" name="total" id="total" />
-                    <input type="hidden" name="shipping"  id="shipping"  />
-                    <input type="hidden" name="unitprice" id="unitprice"  />
-                    <input type="hidden" name="category" id="category"  />
-                    <input type="hidden" name="itemname" id="itemname"  />
-                    <input type="hidden" name="prodId" id="prodId"  />
-                    <fieldset>
-                            
-                        <div class="qty-box" id="qty-box">
-                                <div class="qty-item item">
+          <div class="add-to-basket-container">
+            <!-- ************************************************ -->
+            <form method="get" class="basket_add">
+              <input type="hidden" name="miniBasket" id="miniBasket" />
+              <input type="hidden" name="total" id="total" />
+              <input type="hidden" name="shipping" id="shipping" />
+              <input type="hidden" name="unitprice" id="unitprice" />
+              <input type="hidden" name="category" id="category" />
+              <input type="hidden" name="itemname" id="itemname" />
+              <input type="hidden" name="prodId" id="prodId" />
+              <fieldset>
+                <div class="qty-box" id="qty-box">
+                  <!-- <div class="qty-item item">
                         
                                     <label for="qty" class="auto">Quantity:</label>
                                     <input type="number" class="text small align_centre" name="qty" id="qty" max="10" min="1"  value="1"/>
-                                </div>
-                                <div class="add-btn-item item">
-                                <input type="submit" id="addtoBasket" class="checkout float_right" value="Add to Basket" />
-                                </div>
-                            
-                            
-                            </div>
-                            
-                    
-                    </fieldset>
-                </form>
-
-                    <!-- ************************************************ -->
+                                </div> -->
+                  <div class="add-btn-item item">
+                    <input
+                      type="submit"
+                      id="addtoBasket"
+                      class="checkout float_right"
+                      value="Add to Basket"
+                    />
+                  </div>
                 </div>
-                
-            </aside>
+              </fieldset>
+            </form>
 
-        </div>
+            <!-- ************************************************ -->
+          </div>
+        </aside>
+      </div>
     </main>
 
-     <!-- Footer -->
-     <footer id="footer" ></footer>
+    <!-- Footer -->
+    <footer id="footer"></footer>
 
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="../js/jquery-1.8.3.min.js"><\/script>')</script>
-        <script src="js/site/plugins.min.js"></script>
-        <script src="js/site/all.js"></script>
-    </body>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script>
+      window.jQuery ||
+        document.write('<script src="../js/jquery-1.8.3.min.js"><\/script>');
+    </script>
+    <script src="js/site/plugins.min.js"></script>
+    <script src="js/site/all.js"></script>
+  </body>
 </html>

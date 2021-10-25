@@ -1,0 +1,16 @@
+{
+  "name": "shopscss",
+  "version": "1.0.0",
+  "description": "with SCSS",
+  "main": "index.js",
+  "scripts": {
+    "css": "node-sass --include-path scss css/style.scss css/style.css",
+    "watch": "nodemon -e js,scss -x 'npm run css'"
+  },
+  "author": "Fang-Wen Lee",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.12"
+  }
+}

@@ -1,0 +1,895 @@
+
+@import "variables";
+@import "normalize";
+@import "mixins";
+@import "base";
+@import "header";
+
+@import "modules/flex";
+@import "modules/minicart";
+@import "modules/product-page";
+@import "modules/navigation";
+
+// @import url(prodDetail.css);
+// $Primary_Font: "Open Sans", sans-serif;
+// $Primary_FontSize: 18px;
+// $Btn_FontSize: 1.2em;
+
+// $White: #fff;
+// $Dark_Grey: #4c4e4e;
+// $Red: #921a1a;
+// $Light_Grey: #cfcccc;
+// $Light_Yello_Green: #b2ad7f;
+
+// $Header_BackGround_Color: #0c3443;
+// $Content_Background_Color: #f3f3f3;
+// $Page_Transparent_Color: rgba(0, 0, 0, 0.65);
+// // $Content_Background_Color: #4c4e4e;
+
+// $Btn_Normal: rgba(0, 0, 0, 0.3);
+// $Btn_Normal_H: rgba(8, 27, 115, 0.5);
+// $Btn_Add_Color: #053e55;
+// $Btn_Add_Color_H: #007eff;
+// $Btn_Color_H: #ffff54;
+
+// $Btn_Nav_Color: rgba(0, 0, 0, 0.3);
+// $Btn_Nav_H: #0c3443;
+// $Link_Color_A: #007eff;
+
+// $Page_Width: 1250px;
+//=================================================
+// @mixin phone-extra-small {
+//   @media (max-width: 400px) {
+//     @content;
+//   }
+// }
+// @mixin phone-small {
+//   @media (max-width: 480px) {
+//     @content;
+//   }
+// }
+// @mixin phone {
+//   @media (max-width: 550px) {
+//     @content;
+//   }
+// }
+// @mixin phone-land {
+//   @media (max-width: 650px) {
+//     @content;
+//   }
+// }
+// @mixin tablet-portrait {
+//   @media (max-width: 760px) {
+//     @content;
+//   }
+// }
+// @mixin tablet {
+//   @media (max-width: 860px) {
+//     @content;
+//   }
+// }
+
+// @mixin tablet-landscape {
+//   @media (max-width: 960px) {
+//     @content;
+//   }
+// }
+// @mixin desktop {
+//   @media (max-width: 1200px) {
+//     @content;
+//   }
+// }
+// @mixin big-desktop {
+//   @media (max-width: 1800px) {
+//     @content;
+//   }
+// }
+//SCSS SYNTAX=============================================
+
+// @mixin headerArea($height, $image, $bgC, $x: center, $y: bottom) {
+//   // height: 230px;
+//   height: $height;
+//   background: {
+//     // color: $Header_BackGround_Color;
+//     color: $bgC;
+//     image: $image;
+//     repeat: no-repeat;
+//     position: $x $y;
+//   }
+// }
+// @mixin navArea($bgColor) {
+//   background-color: $bgColor;
+//   position: fixed;
+//   width: 100%;
+//   z-index: 2;
+//   padding-top: 15px;
+// }
+// @mixin borderRadius($size) {
+//   border-radius: $size;
+// }
+//==============================================
+// body {
+//   font-family: $Primary_Font;
+//   font-size: $Primary_FontSize;
+//   color: $Dark_Grey;
+//   font-weight: 300;
+//   margin: 0 auto;
+// }
+// main,
+// footer {
+//   margin: 0;
+//   padding: 10px;
+//   color: $Dark_Grey;
+//   margin-top: 30px;
+//   @include phone {
+//     margin-top: 0px;
+//   }
+// }
+
+// main#page {
+//   max-width: $Page_Width;
+//   margin: 0 auto;
+//   position: relative;
+// }
+
+// p {
+//   margin: 0, 0, 1em, 0;
+// }
+
+// a {
+//   color: $Link_Color_A;
+// }
+
+// a:visited {
+//   color: #65b1ff;
+// }
+
+// a.btn {
+//   font-size: $Btn_FontSize;
+//   text-decoration: none;
+//   color: $White;
+//   border: 1px solid $Light_Yello_Green;
+//   padding: 10px 15px;
+//   transition: background-color 0.2s;
+//   margin-left: 250px;
+//   background-color: $Btn_Normal;
+//   @include tablet-portrait {
+//     font-size: 1em;
+//   }
+//   @include phone {
+//     display: none;
+//   }
+// }
+
+// a.btn:hover {
+//   // background-color: rgba(8, 27, 115, 0.5);
+//   background-color: $Btn_Normal_H;
+// }
+
+// input[type="submit"] {
+//   margin: 5px;
+//   padding-top: 3px;
+//   padding-bottom: 3px;
+// }
+/* basket */
+// #basket {
+//   position: sticky;
+//   z-index: 10;
+// }
+// #basket a {
+//   position: fixed;
+//   color: $Light_Grey;
+//   top: 50px;
+//   font-size: 14px;
+//   margin-left: 20px;
+//   @include phone {
+//     top: 60px;
+//     font-size: 14px;
+//   }
+// }
+
+// .overlay {
+//   position: fixed;
+//   left: 0;
+//   top: 0;
+//   width: 100vw;
+//   height: 100vh;
+
+//   background-color: $Page_Transparent_Color;
+//   z-index: 10;
+
+//   display: none;
+//   @include phone-extra-small {
+//     width: 100%;
+//     height: 100%;
+//   }
+// }
+// section.mini-basket-box {
+//   visibility: hidden;
+//   position: absolute;
+
+//   @include borderRadius(10px) background-color: rgb(75, 107, 182);
+//   padding: 5px;
+//   min-width: 500px;
+//   color: $White;
+//   font-size: 26px;
+//   margin: 0 auto;
+//   z-index: 20;
+//   left: 50%;
+//   top: 50%;
+//   transform: translate(-50%, -50%);
+//   box-shadow: 0px 0px 50px 1px #000;
+//   @include phone {
+//     top: 50%;
+//     min-width: 400px;
+//     padding: 0px;
+//     @include borderRadius(5px);
+//   }
+//   @include phone-extra-small {
+//     min-width: 300px;
+//   }
+// }
+// .mini-basket-box .prod-flex-container {
+//   display: flex;
+//   font-size: $Primary_FontSize;
+//   padding: 5px;
+// }
+// .mini-basket-box .prod-flex-container .item {
+//   height: 80px;
+//   width: 100px;
+//   margin-top: 10px;
+//   @include phone {
+//     font-size: 15px;
+//   }
+// }
+// .mini-basket-box .prod-flex-container.item + .item {
+//   margin-left: 2%;
+// }
+// .mini-basket-box .prod-flex-container .item-center {
+//   border-bottom: 1px solid $White;
+//   flex-grow: 1; /* Set the middle element to grow and stretch */
+//   @include phone {
+//     font-size: 15px;
+//     width: 100%;
+//   }
+// }
+// .mini-basket-box .prod-flex-container .item-center span {
+//   color: rgb(207, 204, 204);
+//   width: 100px;
+//   font-size: 14px;
+//   display: inline-block;
+//   @include phone {
+//     width: 70px;
+//   }
+// }
+
+// .mini-basket-box .prod-flex-container.item-center #qty {
+//   width: 50px;
+//   background-color: rgb(207, 204, 204);
+// }
+// .mini-basket-box .flexbox-img-item img {
+//   width: 80px;
+//   height: 65px;
+//   @include phone {
+//     width: 50px;
+//     height: 50px;
+//   }
+// }
+// .mini-basket-box .close-basket-btn {
+//   position: relative;
+// }
+// .mini-basket-box #close-basket {
+//   text-decoration: none;
+//   position: absolute;
+//   right: 10px;
+//   font-size: $Primary_FontSize;
+// }
+
+// .mini-basket-box #title {
+//   font-size: $Primary_FontSize;
+//   line-height: 26px;
+//   padding: 10px;
+//   color: $Btn_Color_H;
+// }
+// .mini-basket-box a.deleteItem {
+//   color: $Light_Grey;
+// }
+/* header  */
+// header {
+//   @include headerArea(
+//     230px,
+//     url("../images/site/back-to-School-banners-hero.jpg"),
+//     $Btn_Add_Color
+//   );
+
+//   @include tablet-portrait() {
+//     @include headerArea(
+//       180px,
+//       url("../images/site/back-to-School-banners-hero-tablet.jpg"),
+//       $Header_BackGround_Color
+//     );
+//   }
+
+//   @include phone {
+//     height: 75px;
+//     background-color: $White;
+//   }
+// }
+
+// header a.logo {
+//   z-index: 3;
+//   position: fixed;
+//   display: block;
+//   width: 160px;
+//   height: 43px;
+//   background: url("../images/shop_logo_us.svg") no-repeat 0 0;
+//   background-size: contain;
+//   top: 5px;
+//   left: 20px;
+
+//   @include tablet-portrait {
+//     width: 145px;
+//     height: 60px;
+//     top: 10px;
+//   }
+
+//   @include phone-small {
+//     width: 124px;
+//     top: 5px;
+//     background-size: 124px 51px;
+//   }
+// }
+
+// header a.logo span {
+//   display: none;
+// }
+
+// header div.hero a.btn span {
+//   @include phone-small {
+//     display: none;
+//   }
+// }
+// header div.hero {
+//   position: absolute;
+//   width: 500px;
+//   top: 90px;
+//   right: 10px;
+
+//   @include tablet-portrait {
+//     top: 60px;
+//   }
+//   // @include phone {
+//   // left: 65%;
+//   // }
+//   @include phone-small {
+//     top: 75px;
+//     text-align: center;
+//     // left: 49%;
+//   }
+// }
+
+// header .hero h1 {
+//   line-height: 1em;
+//   margin: 0 0 30px 0;
+//   color: $White;
+//   visibility: hidden;
+//   @include tablet-portrait {
+//     font-size: 1.9em;
+//     visibility: none;
+//   }
+//   @include phone {
+//     display: none;
+//   }
+// }
+
+/*  Section - All*/
+
+// section {
+//   padding: 0 30px;
+//   @include tablet-landscape {
+//     padding: 0px;
+//   }
+// }
+
+// section::after {
+//   content: "";
+//   display: block;
+//   clear: both;
+// }
+
+/*  Section - main - index.html ******** */
+
+// section.main {
+//   margin-top: 10px;
+//   margin-bottom: 30px;
+//   padding: 0;
+
+//   @include tablet-portrait {
+//     margin-top: 10px;
+//     margin-bottom: 12px;
+//   }
+// }
+
+// section.main .flex-container {
+//   display: flex;
+//   flex-wrap: wrap;
+
+//   @include tablet-portrait {
+//     justify-content: space-around;
+//   }
+// }
+
+// section.main .flex-container .flexbox-item {
+//   @include phone-small {
+//     height: 370px;
+//     font-size: $Primary_FontSize;
+//     flex: 0 0 85%;
+//     // flex: 1;
+//   }
+// }
+// section.main .flex-container #add-to-basket.onSale {
+//   background-color: $Btn_Add_Color;
+//   color: $White;
+//   line-height: 22px;
+//   border: 0px;
+//   @include borderRadius(3px);
+
+//   @include phone-small {
+//     line-height: 22px;
+//     border-radius: 3px;
+//     margin-top: 10px;
+//     text-decoration: none;
+//     color: $White;
+//     border: 1px solid $White;
+//     background-color: $Btn_Add_Color;
+//     padding: 12px 20px;
+//     transition: background-color 0.2s;
+//   }
+// }
+// section.main .flex-container #add-to-basket.onSale:hover {
+//   background-color: $Btn_Add_Color_H;
+// }
+
+// section.main .flex-container > div {
+//   flex-direction: column;
+//   align-items: flex-start;
+//   background-color: $Content_Background_Color;
+//   border-bottom-right-radius: 35px;
+//   margin: 10px;
+//   padding: 10px;
+//   font-size: 0.8em;
+//   width: 12.6%;
+//   height: 285px;
+
+//   @include desktop {
+//     height: 296px;
+//     width: 12%;
+//   }
+
+//   @include tablet() {
+//     width: 14%;
+//   }
+//   @include tablet-portrait {
+//     height: 305px;
+//     width: 17%;
+//   }
+
+//   @include phone {
+//     width: 38%;
+//     border-bottom-right-radius: 20px;
+
+//     height: 260px;
+//   }
+//   @include phone-small {
+//     flex-direction: row;
+//   }
+// }
+// section.main .flex-container #test-on-sale {
+//   font-weight: 600;
+//   @include phone-small {
+//     display: none;
+//   }
+// }
+// section.main .flex-container #special,
+// main.product-page #special {
+//   color: $Red;
+// }
+// section.main .flex-container #regular-sale {
+//   font-weight: 600;
+//   @include phone-small {
+//     margin-left: 20px;
+//     font-size: 24px;
+//     font-weight: 600;
+//   }
+// }
+// section.main .flex-container .out-of-stock {
+//   margin-top: 10px;
+//   width: 100px;
+//   padding: 8px;
+//   color: $Btn_Nav_H;
+//   @include phone-small {
+//     width: 200px;
+//   }
+// }
+// section.main .flex-container .posts-detail {
+//   height: 100px;
+//   @include phone {
+//     display: none;
+//   }
+// }
+// section.main .flex-container .posts-img {
+//   height: 90px;
+//   overflow: hidden;
+//   background-size: cover;
+//   text-align: center;
+//   @include phone {
+//     height: 100px;
+//     padding: 30px;
+//   }
+//   @include phone-small {
+//     height: 170px;
+//   }
+// }
+// section.main .flex-container .flexbox-item p.out-of-boxss {
+//   color: $Content_Background_Color;
+// }
+// section.main .flex-container .flexbox-item a {
+//   text-decoration: none;
+//   margin-top: 30px;
+// }
+// section.main .flex-container .flexbox-item #goto-detail {
+//   line-height: 160px;
+//   color: transparent;
+// }
+
+// section.main .flex-container .posts-img:hover {
+//   opacity: 0.5;
+// }
+// section.main .flex-container .list-price-normal {
+//   display: block;
+//   @include desktop {
+//     margin-top: 10px;
+//   }
+
+//   @include tablet-portrait {
+//     margin-top: 10px;
+//   }
+//   @include phone-small {
+//     display: none;
+//   }
+// }
+// section.main .flex-container .list-price-mobile {
+//   display: none;
+//   @include phone-small {
+//     display: block;
+//     margin-top: 10px;
+//   }
+// }
+
+// section.main .flex-container .content div > h3 a {
+//   color: #000;
+//   text-decoration: none;
+// }
+// section.main .flex-container .content div > h3 a:hover {
+//   color: #65b1ff;
+// }
+
+/* product detail page */
+// main.product-page {
+//   background: $White;
+//   min-height: 400px;
+// }
+
+// main.product-page .content {
+//   flex: 1;
+//   margin-right: auto;
+// }
+
+// main.product-page .wrapper {
+//   margin: auto;
+//   max-width: 75rem;
+// }
+// main.product-page aside {
+//   padding-left: 10px;
+//   color: $Dark_Grey;
+// }
+// main.product-page .sidebar {
+//   border: 1px solid #000000;
+//   background: $Content_Background_Color;
+//   /* flex: 1; */
+//   padding-left: 40px;
+//   padding-right: 40px;
+//   @include tablet-landscape {
+//     padding-left: 20px;
+//     padding-right: 10px;
+//   }
+//   @include tablet-portrait {
+//     padding-left: 10px;
+//   }
+// }
+
+// main.product-page .sidebar #notAvailable {
+//   color: #a2a3a3;
+//   font-size: 3rem;
+// }
+
+// main.product-page .sidebar #notAvailable {
+//   color: #a2a3a3;
+//   font-size: 3rem;
+// }
+
+// main.product-page fieldset {
+//   margin-top: 15px;
+
+//   border: 0px;
+
+//   @include phone-small {
+//     border: 0px;
+//   }
+// }
+
+// main.product-page .price-box .item {
+//   margin-right: 40px;
+// }
+
+// main.product-page .price-box .item span#onsale-price {
+//   font-weight: 600;
+//   width: 100px;
+//   font-size: 26px;
+//   padding-left: 20px;
+//   color: $Red;
+// }
+// main.product-page .basket_add .qty-box {
+//   @include borderRadius(0.1em);
+//   min-width: 390px;
+//   display: flex;
+//   margin-top: 10px;
+// }
+// main.product-page .qty-box .qty-item #qty {
+//   width: 60px;
+// }
+// main.product-page .basket_add .qty-box .qty-item {
+//   margin-top: 15px;
+//   margin-left: 10px;
+//   display: none;
+// }
+// main.product-page .basket_add .qty-box .add-btn-item {
+//   margin-left: -20px;
+// }
+// main.product-page #img-container {
+//   @include phone-land {
+//     margin-left: 20%;
+//   }
+//   @include phone-small {
+//     margin-left: 14%;
+//   }
+// }
+// main.product-page #img-container img {
+//   height: 280px;
+//   @include tablet-landscape {
+//     height: 230px;
+//   }
+//   @include tablet-portrait {
+//     height: 200px;
+//   }
+//   @include phone-land {
+//     height: 250px;
+//   }
+// }
+// main.product-page .basket_add fieldset .notAvailable {
+//   display: none;
+// }
+
+// main.product-page.product-page input[type="submit"].isOnSale {
+//   color: $White;
+//   padding: 10px 20px;
+//   border: 0px;
+//   background: linear-gradient(
+//     to bottom,
+//     $Btn_Add_Color 0%,
+//     $Btn_Add_Color_H 100%
+//   );
+// }
+// main.product-page.product-page input[type="submit"].isOnSale:hover {
+//   color: $Btn_Color_H;
+// }
+/* navigation */
+/* **************************************************************** */
+// nav {
+//   @include navArea(rgba(0, 0, 0, 0.65));
+
+//   @include phone {
+//     padding: 60px 15px 30px 15px;
+//     background-color: $Header_BackGround_Color;
+//     height: 0px;
+//     overflow: hidden;
+//   }
+
+//   // @include phone-small {
+//   //   padding-top: 30px;
+//   // }
+// }
+
+// nav::after {
+//   content: "";
+//   display: block;
+//   clear: both;
+// }
+
+// nav a.mobile_menu {
+//   width: 32px;
+//   height: 32px;
+//   background: url(../images/site/icon_menu.svg) no-repeat 0 0;
+//   background-size: contain;
+//   position: absolute;
+//   top: 9px;
+
+//   margin-left: 16px;
+//   display: none;
+//   @include phone {
+//     display: block;
+//     left: 78%;
+//   }
+//   @include phone-small {
+//     left: 71%;
+//   }
+// }
+
+// nav ul,
+// nav ul ul,
+// nav ul ul ul {
+//   @include phone {
+//     display: block;
+//     position: static;
+//   }
+// }
+
+// nav ul {
+//   list-style: none;
+//   // margin: 0;
+//   // padding: 0;
+//   @include tablet-portrait {
+//     padding-left: 10px;
+//   }
+//   @include phone {
+//     padding: 0;
+//   }
+// }
+// nav > ul > li {
+//   float: right;
+//   @include phone {
+//     float: none;
+//   }
+// }
+// nav ul li:hover {
+//   // background-color: $Header_BackGround_Color;
+//   color: $Btn_Nav_H;
+//   @include phone {
+//     background: none;
+//   }
+// }
+
+// nav ul li:hover > ul {
+//   display: block;
+// }
+
+// nav ul li a {
+//   display: inline-block;
+//   color: $White;
+//   padding: 10px 8px;
+//   text-decoration: none;
+//   width: 110px;
+//   position: relative;
+
+//   @include phone {
+//     width: auto;
+//     display: block;
+//     margin: 4px 10px;
+//     padding: 6px 15px 6px 2px;
+//     border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+//   }
+// }
+
+// nav ul li a:visited {
+//   color: $White;
+// }
+
+// nav ul li a:hover {
+//   background-color: $Btn_Nav_Color;
+//   @include phone {
+//     background-color: rgba(255, 255, 255, 0.1);
+//   }
+// }
+
+// nav ul ul {
+//   position: absolute;
+//   top: 100%;
+//   background-color: $Light_Yello_Green;
+//   display: none;
+//   @include phone {
+//     background: none;
+//     margin-left: 45px;
+//     top: 50%;
+//   }
+// }
+
+// nav ul ul li {
+//   position: relative;
+//   margin-left: -25px;
+// }
+// nav ul ul li a {
+//   @include phone {
+//     margin-left: 30px;
+//     margin-top: 20px;
+//   }
+// }
+
+/*top level */
+
+// nav > ul {
+//   padding-left: 200px;
+//   margin-right: 60px;
+//   @include phone {
+//     padding-left: 0px;
+//   }
+// }
+
+// nav > ul > li > a {
+//   width: auto;
+//   padding: 10px 33px 15px 33px;
+// }
+
+// nav [aria-haspopup="true"]::after {
+//   @include phone {
+//     display: none;
+//   }
+// }
+// nav a[aria-haspopup="true"]::after {
+//   content: "";
+//   display: block;
+//   width: 0px;
+//   height: 0px;
+
+//   position: absolute;
+//   top: 16px;
+//   right: 15px;
+//   border-top: 4px solid transparent;
+//   border-bottom: 4px solid transparent;
+//   border-left: 4px solid $White;
+// }
+
+// nav > ul > li > a[aria-haspopup="true"]::after {
+//   border-left: 4px solid transparent;
+//   border-right: 4px solid transparent;
+//   border-top: 4px solid $White;
+//   left: 20px;
+//   right: auto;
+//   bottom: 6px;
+//   top: auto;
+// }
+
+/* footer */
+
+// footer {
+//   font-size: 0.8em;
+//   margin: 40px;
+//   color: $Dark_Grey;
+//   white-space: nowrap;
+// }
+
+// footer .content {
+//   display: inline;
+// }
+
+// footer a {
+//   margin-left: 30px;
+//   color: #4f4f4f;
+// }
+
+// footer a:visited {
+//   color: #777;
+// }
+
+// footer a:hover {
+//   color: #000;
+// }

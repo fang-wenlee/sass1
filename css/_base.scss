@@ -1,0 +1,75 @@
+body {
+      font-family: $Primary_Font;
+      font-size: $Primary_FontSize;
+      color: $Dark_Grey;
+      font-weight: 300;
+      margin: 0 auto;
+      background-color: $offwhite;
+    }
+    main,
+    footer {
+      margin: 0;
+      padding: 10px;
+      color: $Dark_Grey;
+      margin-top: 30px;
+      @include phone {
+        margin-top: 0px;
+      }
+    }
+    
+    main#page {
+      max-width: $Page_Width;
+      margin: 0 auto;
+      position: relative;
+    }
+    
+    p {
+      margin: 0, 0, 1em, 0;
+    }
+    
+    a {
+      color: $Link_Color_A;
+    }
+    
+    a:visited {
+      color: #65b1ff;
+    }
+    
+    a.btn {
+      font-size: $Btn_FontSize;
+      text-decoration: none;
+      color: $White;
+      border: 1px solid $Light_Yello_Green;
+      padding: 10px 15px;
+      transition: background-color 0.2s;
+      margin-left: 250px;
+      background-color: $Btn_Normal;
+      @include tablet-portrait {
+        font-size: 1em;
+      }
+      @include phone {
+        display: none;
+      }
+    }
+    
+    a.btn:hover {
+      // background-color: rgba(8, 27, 115, 0.5);
+      background-color: $Btn_Normal_H;
+    }
+    
+    input[type="submit"] {
+      margin: 5px;
+      padding-top: 3px;
+      padding-bottom: 3px;
+    }
+
+    section.main {
+        margin-top: 10px;
+        margin-bottom: 30px;
+        padding: 0;
+      
+        @include tablet-portrait {
+          margin-top: 10px;
+          margin-bottom: 12px;
+        }
+      }

@@ -1,0 +1,86 @@
+header {
+    @include headerArea(
+      230px,
+      url("../images/site/back-to-School-banners-hero.jpg"),
+      $Btn_Add_Color
+    );
+  
+    @include tablet-portrait() {
+      @include headerArea(
+        180px,
+        url("../images/site/back-to-School-banners-hero-tablet.jpg"),
+        $Header_BackGround_Color
+      );
+    }
+  
+    @include phone {
+      height: 75px;
+      background-color: $White;
+    }
+  }
+  
+  header a.logo {
+    z-index: 3;
+    position: fixed;
+    display: block;
+    width: 160px;
+    height: 43px;
+    background: url("../images/shop_logo_us.svg") no-repeat 0 0;
+    background-size: contain;
+    top: 5px;
+    left: 20px;
+  
+    @include tablet-portrait {
+      width: 145px;
+      height: 60px;
+      top: 10px;
+    }
+  
+    @include phone-small {
+      width: 124px;
+      top: 5px;
+      background-size: 124px 51px;
+    }
+  }
+  
+  header a.logo span {
+    display: none;
+  }
+  
+  header div.hero a.btn span {
+    @include phone-small {
+      display: none;
+    }
+  }
+  header div.hero {
+    position: absolute;
+    width: 500px;
+    top: 90px;
+    right: 10px;
+  
+    @include tablet-portrait {
+      top: 60px;
+    }
+    // @include phone {
+    // left: 65%;
+    // }
+    @include phone-small {
+      top: 75px;
+      text-align: center;
+      // left: 49%;
+    }
+  }
+  
+  header .hero h1 {
+    line-height: 1em;
+    margin: 0 0 30px 0;
+    color: $White;
+    visibility: hidden;
+    @include tablet-portrait {
+      font-size: 1.9em;
+      visibility: none;
+    }
+    @include phone {
+      display: none;
+    }
+  }

@@ -1,0 +1,118 @@
+main.product-page {
+    background: $White;
+    min-height: 400px;
+  }
+  
+  main.product-page .content {
+    flex: 1;
+    margin-right: auto;
+  }
+  
+  main.product-page .wrapper {
+    margin: auto;
+    max-width: 75rem;
+  }
+  main.product-page aside {
+    padding-left: 10px;
+    color: $Dark_Grey;
+  }
+  main.product-page .sidebar {
+    border: 1px solid #000000;
+    background: $Content_Background_Color;
+    /* flex: 1; */
+    padding-left: 40px;
+    padding-right: 40px;
+    @include tablet-landscape {
+      padding-left: 20px;
+      padding-right: 10px;
+    }
+    @include tablet-portrait {
+      padding-left: 10px;
+    }
+  }
+  
+  main.product-page .sidebar #notAvailable {
+    color: #a2a3a3;
+    font-size: 3rem;
+  }
+  
+  main.product-page .sidebar #notAvailable {
+    color: #a2a3a3;
+    font-size: 3rem;
+  }
+  
+  main.product-page fieldset {
+    margin-top: 15px;
+  
+    border: 0px;
+  
+    @include phone-small {
+      border: 0px;
+    }
+  }
+  
+  main.product-page .price-box .item {
+    margin-right: 40px;
+  }
+  
+  main.product-page .price-box .item span#onsale-price {
+    font-weight: 600;
+    width: 100px;
+    font-size: 26px;
+    padding-left: 20px;
+    color: $Red;
+  }
+  main.product-page .basket_add .qty-box {
+    @include borderRadius(0.1em);
+    min-width: 390px;
+    display: flex;
+    margin-top: 10px;
+  }
+  main.product-page .qty-box .qty-item #qty {
+    width: 60px;
+  }
+  main.product-page .basket_add .qty-box .qty-item {
+    margin-top: 15px;
+    margin-left: 10px;
+    display: none;
+  }
+  main.product-page .basket_add .qty-box .add-btn-item {
+    margin-left: -20px;
+  }
+  main.product-page #img-container {
+    @include phone-land {
+      margin-left: 20%;
+    }
+    @include phone-small {
+      margin-left: 14%;
+    }
+  }
+  main.product-page #img-container img {
+    height: 280px;
+    @include tablet-landscape {
+      height: 230px;
+    }
+    @include tablet-portrait {
+      height: 200px;
+    }
+    @include phone-land {
+      height: 250px;
+    }
+  }
+  main.product-page .basket_add fieldset .notAvailable {
+    display: none;
+  }
+  
+  main.product-page.product-page input[type="submit"].isOnSale {
+    color: $White;
+    padding: 10px 20px;
+    border: 0px;
+    background: linear-gradient(
+      to bottom,
+      $Btn_Add_Color 0%,
+      $Btn_Add_Color_H 100%
+    );
+  }
+  main.product-page.product-page input[type="submit"].isOnSale:hover {
+    color: $Btn_Color_H;
+  }

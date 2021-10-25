@@ -1,0 +1,1044 @@
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+   * Remove default margin.
+   */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+     ========================================================================== */
+/**
+   * Correct `block` display not defined for any HTML5 element in IE 8/9.
+   * Correct `block` display not defined for `details` or `summary` in IE 10/11
+   * and Firefox.
+   * Correct `block` display not defined for `main` in IE 11.
+   */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+/**
+   * 1. Correct `inline-block` display not defined in IE 8/9.
+   * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+   */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+   * Prevent modern browsers from displaying `audio` without controls.
+   * Remove excess height in iOS 5 devices.
+   */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+   * Address `[hidden]` styling not present in IE 8/9/10.
+   * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+   */
+[hidden],
+template {
+  display: none; }
+
+/* Links
+     ========================================================================== */
+/**
+   * Remove the gray background color from active links in IE 10.
+   */
+a {
+  background-color: transparent; }
+
+/**
+   * Improve readability when focused and also mouse hovered in all browsers.
+   */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* Text-level semantics
+     ========================================================================== */
+/**
+   * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+   */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+   * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+   */
+b,
+strong {
+  font-weight: bold; }
+
+/**
+   * Address styling not present in Safari and Chrome.
+   */
+dfn {
+  font-style: italic; }
+
+/**
+   * Address variable `h1` font-size and margin within `section` and `article`
+   * contexts in Firefox 4+, Safari, and Chrome.
+   */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+   * Address styling not present in IE 8/9.
+   */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+   * Address inconsistent and variable font size in all browsers.
+   */
+small {
+  font-size: 80%; }
+
+/**
+   * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+   */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* Embedded content
+     ========================================================================== */
+/**
+   * Remove border when inside `a` element in IE 8/9/10.
+   */
+img {
+  border: 0; }
+
+/**
+   * Correct overflow not hidden in IE 9/10/11.
+   */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+     ========================================================================== */
+/**
+   * Address margin not present in IE 8/9 and Safari.
+   */
+figure {
+  margin: 1em 40px; }
+
+/**
+   * Address differences between Firefox and other browsers.
+   */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+   * Contain overflow in all browsers.
+   */
+pre {
+  overflow: auto; }
+
+/**
+   * Address odd `em`-unit font size rendering in all browsers.
+   */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* Forms
+     ========================================================================== */
+/**
+   * Known limitation: by default, Chrome and Safari on OS X allow very limited
+   * styling of `select`, unless a `border` property is set.
+   */
+/**
+   * 1. Correct color not being inherited.
+   *    Known issue: affects color of disabled elements.
+   * 2. Correct font properties not being inherited.
+   * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+   */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+   * Address `overflow` set to `hidden` in IE 8/9/10/11.
+   */
+button {
+  overflow: visible; }
+
+/**
+   * Address inconsistent `text-transform` inheritance for `button` and `select`.
+   * All other form control elements do not inherit `text-transform` values.
+   * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+   * Correct `select` style inheritance in Firefox.
+   */
+button,
+select {
+  text-transform: none; }
+
+/**
+   * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+   *    and `video` controls.
+   * 2. Correct inability to style clickable `input` types in iOS.
+   * 3. Improve usability and consistency of cursor style between image-type
+   *    `input` and others.
+   */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+   * Re-set default cursor for disabled elements.
+   */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/**
+   * Remove inner padding and border in Firefox 4+.
+   */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+   * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+   * the UA stylesheet.
+   */
+input {
+  line-height: normal; }
+
+/**
+   * It's recommended that you don't attempt to style these elements.
+   * Firefox's implementation doesn't respect box-sizing, padding, or width.
+   *
+   * 1. Address box sizing set to `content-box` in IE 8/9/10.
+   * 2. Remove excess padding in IE 8/9/10.
+   */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+   * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+   * `font-size` values of the `input`, it causes the cursor style of the
+   * decrement button to change from `default` to `text`.
+   */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+   * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+   * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+   *    (include `-moz` to future-proof).
+   */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
+
+/**
+   * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+   * Safari (but not Chrome) clips the cancel button when the search input has
+   * padding (and `textfield` appearance).
+   */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+   * Define consistent border, margin, and padding.
+   */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+   * 1. Correct `color` not being inherited in IE 8/9/10/11.
+   * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+   */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+   * Remove default vertical scrollbar in IE 8/9/10/11.
+   */
+textarea {
+  overflow: auto; }
+
+/**
+   * Don't inherit the `font-weight` (applied by a rule above).
+   * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+   */
+optgroup {
+  font-weight: bold; }
+
+/* Tables
+     ========================================================================== */
+/**
+   * Remove most spacing between table cells.
+   */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0; }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  color: #4c4e4e;
+  font-weight: 300;
+  margin: 0 auto;
+  background-color: #EEE8D6; }
+
+main,
+footer {
+  margin: 0;
+  padding: 10px;
+  color: #4c4e4e;
+  margin-top: 30px; }
+  @media (max-width: 550px) {
+    main,
+    footer {
+      margin-top: 0px; } }
+
+main#page {
+  max-width: 1250px;
+  margin: 0 auto;
+  position: relative; }
+
+p {
+  margin: 0, 0, 1em, 0; }
+
+a {
+  color: #007eff; }
+
+a:visited {
+  color: #65b1ff; }
+
+a.btn {
+  font-size: 1.2em;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #b2ad7f;
+  padding: 10px 15px;
+  transition: background-color 0.2s;
+  margin-left: 250px;
+  background-color: rgba(0, 0, 0, 0.3); }
+  @media (max-width: 760px) {
+    a.btn {
+      font-size: 1em; } }
+  @media (max-width: 550px) {
+    a.btn {
+      display: none; } }
+
+a.btn:hover {
+  background-color: rgba(8, 27, 115, 0.5); }
+
+input[type="submit"] {
+  margin: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px; }
+
+section.main {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  padding: 0; }
+  @media (max-width: 760px) {
+    section.main {
+      margin-top: 10px;
+      margin-bottom: 12px; } }
+
+header {
+  height: 230px;
+  background-color: #053e55;
+  background-image: url("../images/site/back-to-School-banners-hero.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom; }
+  @media (max-width: 760px) {
+    header {
+      height: 180px;
+      background-color: #0c3443;
+      background-image: url("../images/site/back-to-School-banners-hero-tablet.jpg");
+      background-repeat: no-repeat;
+      background-position: center bottom; } }
+  @media (max-width: 550px) {
+    header {
+      height: 75px;
+      background-color: #fff; } }
+
+header a.logo {
+  z-index: 3;
+  position: fixed;
+  display: block;
+  width: 160px;
+  height: 43px;
+  background: url("../images/shop_logo_us.svg") no-repeat 0 0;
+  background-size: contain;
+  top: 5px;
+  left: 20px; }
+  @media (max-width: 760px) {
+    header a.logo {
+      width: 145px;
+      height: 60px;
+      top: 10px; } }
+  @media (max-width: 480px) {
+    header a.logo {
+      width: 124px;
+      top: 5px;
+      background-size: 124px 51px; } }
+
+header a.logo span {
+  display: none; }
+
+@media (max-width: 480px) {
+  header div.hero a.btn span {
+    display: none; } }
+
+header div.hero {
+  position: absolute;
+  width: 500px;
+  top: 90px;
+  right: 10px; }
+  @media (max-width: 760px) {
+    header div.hero {
+      top: 60px; } }
+  @media (max-width: 480px) {
+    header div.hero {
+      top: 75px;
+      text-align: center; } }
+
+header .hero h1 {
+  line-height: 1em;
+  margin: 0 0 30px 0;
+  color: #fff;
+  visibility: hidden; }
+  @media (max-width: 760px) {
+    header .hero h1 {
+      font-size: 1.9em;
+      visibility: none; } }
+  @media (max-width: 550px) {
+    header .hero h1 {
+      display: none; } }
+
+section.main .flex-container {
+  display: flex;
+  flex-wrap: wrap; }
+  @media (max-width: 760px) {
+    section.main .flex-container {
+      justify-content: space-around; } }
+
+@media (max-width: 480px) {
+  section.main .flex-container .flexbox-item {
+    height: 370px;
+    font-size: 18px;
+    flex: 0 0 85%; } }
+
+section.main .flex-container #add-to-basket.onSale {
+  background-color: #053e55;
+  color: #fff;
+  line-height: 22px;
+  border: 0px;
+  border-radius: 3px; }
+  @media (max-width: 480px) {
+    section.main .flex-container #add-to-basket.onSale {
+      line-height: 22px;
+      border-radius: 3px;
+      margin-top: 10px;
+      text-decoration: none;
+      color: #fff;
+      border: 1px solid #fff;
+      background-color: #053e55;
+      padding: 12px 20px;
+      transition: background-color 0.2s; } }
+
+section.main .flex-container #add-to-basket.onSale:hover {
+  background-color: #007eff; }
+
+section.main .flex-container > div {
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #f3f3f3;
+  border-bottom-right-radius: 35px;
+  margin: 10px;
+  padding: 10px;
+  font-size: 0.8em;
+  width: 12.6%;
+  height: 285px; }
+  @media (max-width: 1200px) {
+    section.main .flex-container > div {
+      height: 296px;
+      width: 12%; } }
+  @media (max-width: 860px) {
+    section.main .flex-container > div {
+      width: 14%; } }
+  @media (max-width: 760px) {
+    section.main .flex-container > div {
+      height: 305px;
+      width: 17%; } }
+  @media (max-width: 550px) {
+    section.main .flex-container > div {
+      width: 38%;
+      border-bottom-right-radius: 20px;
+      height: 260px; } }
+  @media (max-width: 480px) {
+    section.main .flex-container > div {
+      flex-direction: row; } }
+
+section.main .flex-container #test-on-sale {
+  font-weight: 600; }
+  @media (max-width: 480px) {
+    section.main .flex-container #test-on-sale {
+      display: none; } }
+
+section.main .flex-container #special,
+main.product-page #special {
+  color: #921a1a; }
+
+section.main .flex-container #regular-sale {
+  font-weight: 600; }
+  @media (max-width: 480px) {
+    section.main .flex-container #regular-sale {
+      margin-left: 20px;
+      font-size: 24px;
+      font-weight: 600; } }
+
+section.main .flex-container .out-of-stock {
+  margin-top: 10px;
+  width: 100px;
+  padding: 8px;
+  color: #0c3443; }
+  @media (max-width: 480px) {
+    section.main .flex-container .out-of-stock {
+      width: 200px; } }
+
+section.main .flex-container .posts-detail {
+  height: 100px; }
+  @media (max-width: 550px) {
+    section.main .flex-container .posts-detail {
+      display: none; } }
+
+section.main .flex-container .posts-img {
+  height: 90px;
+  overflow: hidden;
+  background-size: cover;
+  text-align: center; }
+  @media (max-width: 550px) {
+    section.main .flex-container .posts-img {
+      height: 100px;
+      padding: 30px; } }
+  @media (max-width: 480px) {
+    section.main .flex-container .posts-img {
+      height: 170px; } }
+
+section.main .flex-container .flexbox-item p.out-of-boxss {
+  color: #f3f3f3; }
+
+section.main .flex-container .flexbox-item a {
+  text-decoration: none;
+  margin-top: 30px; }
+
+section.main .flex-container .flexbox-item #goto-detail {
+  line-height: 160px;
+  color: transparent; }
+
+section.main .flex-container .posts-img:hover {
+  opacity: 0.5; }
+
+section.main .flex-container .list-price-normal {
+  display: block; }
+  @media (max-width: 1200px) {
+    section.main .flex-container .list-price-normal {
+      margin-top: 10px; } }
+  @media (max-width: 760px) {
+    section.main .flex-container .list-price-normal {
+      margin-top: 10px; } }
+  @media (max-width: 480px) {
+    section.main .flex-container .list-price-normal {
+      display: none; } }
+
+section.main .flex-container .list-price-mobile {
+  display: none; }
+  @media (max-width: 480px) {
+    section.main .flex-container .list-price-mobile {
+      display: block;
+      margin-top: 10px; } }
+
+section.main .flex-container .content div > h3 a {
+  color: #000;
+  text-decoration: none; }
+
+section.main .flex-container .content div > h3 a:hover {
+  color: #65b1ff; }
+
+#basket {
+  position: sticky;
+  z-index: 10; }
+
+#basket a {
+  position: fixed;
+  color: #cfcccc;
+  top: 50px;
+  font-size: 14px;
+  margin-left: 20px; }
+  @media (max-width: 550px) {
+    #basket a {
+      top: 60px;
+      font-size: 14px; } }
+
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.65);
+  z-index: 10;
+  display: none; }
+  @media (max-width: 400px) {
+    .overlay {
+      width: 100%;
+      height: 100%; } }
+
+section.mini-basket-box {
+  visibility: hidden;
+  position: absolute;
+  border-radius: 10px;
+  background-color: #4b6bb6;
+  padding: 5px;
+  min-width: 500px;
+  color: #fff;
+  font-size: 26px;
+  margin: 0 auto;
+  z-index: 20;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 50px 1px #000; }
+  @media (max-width: 550px) {
+    section.mini-basket-box {
+      top: 50%;
+      min-width: 400px;
+      padding: 0px;
+      border-radius: 5px; } }
+  @media (max-width: 400px) {
+    section.mini-basket-box {
+      min-width: 300px; } }
+
+.mini-basket-box .prod-flex-container {
+  display: flex;
+  font-size: 18px;
+  padding: 5px; }
+
+.mini-basket-box .prod-flex-container .item {
+  height: 80px;
+  width: 100px;
+  margin-top: 10px; }
+  @media (max-width: 550px) {
+    .mini-basket-box .prod-flex-container .item {
+      font-size: 15px; } }
+
+.mini-basket-box .prod-flex-container.item + .item {
+  margin-left: 2%; }
+
+.mini-basket-box .prod-flex-container .item-center {
+  border-bottom: 1px solid #fff;
+  flex-grow: 1;
+  /* Set the middle element to grow and stretch */ }
+  @media (max-width: 550px) {
+    .mini-basket-box .prod-flex-container .item-center {
+      font-size: 15px;
+      width: 100%; } }
+
+.mini-basket-box .prod-flex-container .item-center span {
+  color: #cfcccc;
+  width: 100px;
+  font-size: 14px;
+  display: inline-block; }
+  @media (max-width: 550px) {
+    .mini-basket-box .prod-flex-container .item-center span {
+      width: 70px; } }
+
+.mini-basket-box .prod-flex-container.item-center #qty {
+  width: 50px;
+  background-color: #cfcccc; }
+
+.mini-basket-box .flexbox-img-item img {
+  width: 80px;
+  height: 65px; }
+  @media (max-width: 550px) {
+    .mini-basket-box .flexbox-img-item img {
+      width: 50px;
+      height: 50px; } }
+
+.mini-basket-box .close-basket-btn {
+  position: relative; }
+
+.mini-basket-box #close-basket {
+  text-decoration: none;
+  position: absolute;
+  right: 10px;
+  font-size: 18px; }
+
+.mini-basket-box #title {
+  font-size: 18px;
+  line-height: 26px;
+  padding: 10px;
+  color: #ffff54; }
+
+.mini-basket-box a.deleteItem {
+  color: #cfcccc; }
+
+main.product-page {
+  background: #fff;
+  min-height: 400px; }
+
+main.product-page .content {
+  flex: 1;
+  margin-right: auto; }
+
+main.product-page .wrapper {
+  margin: auto;
+  max-width: 75rem; }
+
+main.product-page aside {
+  padding-left: 10px;
+  color: #4c4e4e; }
+
+main.product-page .sidebar {
+  border: 1px solid #000000;
+  background: #f3f3f3;
+  /* flex: 1; */
+  padding-left: 40px;
+  padding-right: 40px; }
+  @media (max-width: 960px) {
+    main.product-page .sidebar {
+      padding-left: 20px;
+      padding-right: 10px; } }
+  @media (max-width: 760px) {
+    main.product-page .sidebar {
+      padding-left: 10px; } }
+
+main.product-page .sidebar #notAvailable {
+  color: #a2a3a3;
+  font-size: 3rem; }
+
+main.product-page .sidebar #notAvailable {
+  color: #a2a3a3;
+  font-size: 3rem; }
+
+main.product-page fieldset {
+  margin-top: 15px;
+  border: 0px; }
+  @media (max-width: 480px) {
+    main.product-page fieldset {
+      border: 0px; } }
+
+main.product-page .price-box .item {
+  margin-right: 40px; }
+
+main.product-page .price-box .item span#onsale-price {
+  font-weight: 600;
+  width: 100px;
+  font-size: 26px;
+  padding-left: 20px;
+  color: #921a1a; }
+
+main.product-page .basket_add .qty-box {
+  border-radius: 0.1em;
+  min-width: 390px;
+  display: flex;
+  margin-top: 10px; }
+
+main.product-page .qty-box .qty-item #qty {
+  width: 60px; }
+
+main.product-page .basket_add .qty-box .qty-item {
+  margin-top: 15px;
+  margin-left: 10px;
+  display: none; }
+
+main.product-page .basket_add .qty-box .add-btn-item {
+  margin-left: -20px; }
+
+@media (max-width: 650px) {
+  main.product-page #img-container {
+    margin-left: 20%; } }
+
+@media (max-width: 480px) {
+  main.product-page #img-container {
+    margin-left: 14%; } }
+
+main.product-page #img-container img {
+  height: 280px; }
+  @media (max-width: 960px) {
+    main.product-page #img-container img {
+      height: 230px; } }
+  @media (max-width: 760px) {
+    main.product-page #img-container img {
+      height: 200px; } }
+  @media (max-width: 650px) {
+    main.product-page #img-container img {
+      height: 250px; } }
+
+main.product-page .basket_add fieldset .notAvailable {
+  display: none; }
+
+main.product-page.product-page input[type="submit"].isOnSale {
+  color: #fff;
+  padding: 10px 20px;
+  border: 0px;
+  background: linear-gradient(to bottom, #053e55 0%, #007eff 100%); }
+
+main.product-page.product-page input[type="submit"].isOnSale:hover {
+  color: #ffff54; }
+
+nav {
+  background-color: rgba(0, 0, 0, 0.65);
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  padding-top: 15px; }
+  @media (max-width: 550px) {
+    nav {
+      padding: 60px 15px 30px 15px;
+      background-color: #0c3443;
+      height: 0px;
+      overflow: hidden; } }
+
+nav::after {
+  content: "";
+  display: block;
+  clear: both; }
+
+nav a.mobile_menu {
+  width: 32px;
+  height: 32px;
+  background: url(../images/site/icon_menu.svg) no-repeat 0 0;
+  background-size: contain;
+  position: absolute;
+  top: 9px;
+  margin-left: 16px;
+  display: none; }
+  @media (max-width: 550px) {
+    nav a.mobile_menu {
+      display: block;
+      left: 78%; } }
+  @media (max-width: 480px) {
+    nav a.mobile_menu {
+      left: 71%; } }
+
+@media (max-width: 550px) {
+  nav ul,
+  nav ul ul,
+  nav ul ul ul {
+    display: block;
+    position: static; } }
+
+nav ul {
+  list-style: none; }
+  @media (max-width: 760px) {
+    nav ul {
+      padding-left: 10px; } }
+  @media (max-width: 550px) {
+    nav ul {
+      padding: 0; } }
+
+nav > ul > li {
+  float: right; }
+  @media (max-width: 550px) {
+    nav > ul > li {
+      float: none; } }
+
+nav ul li:hover {
+  color: #0c3443; }
+  @media (max-width: 550px) {
+    nav ul li:hover {
+      background: none; } }
+
+nav ul li:hover > ul {
+  display: block; }
+
+nav ul li a {
+  display: inline-block;
+  color: #fff;
+  padding: 10px 8px;
+  text-decoration: none;
+  width: 110px;
+  position: relative; }
+  @media (max-width: 550px) {
+    nav ul li a {
+      width: auto;
+      display: block;
+      margin: 4px 10px;
+      padding: 6px 15px 6px 2px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.25); } }
+
+nav ul li a:visited {
+  color: #fff; }
+
+nav ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.3); }
+  @media (max-width: 550px) {
+    nav ul li a:hover {
+      background-color: rgba(255, 255, 255, 0.1); } }
+
+nav ul ul {
+  position: absolute;
+  top: 100%;
+  background-color: #b2ad7f;
+  display: none; }
+  @media (max-width: 550px) {
+    nav ul ul {
+      background: none;
+      margin-left: 45px;
+      top: 50%; } }
+
+nav ul ul li {
+  position: relative;
+  margin-left: -25px; }
+
+@media (max-width: 550px) {
+  nav ul ul li a {
+    margin-left: 30px;
+    margin-top: 20px; } }
+
+/*top level */
+nav > ul {
+  padding-left: 200px;
+  margin-right: 60px; }
+  @media (max-width: 550px) {
+    nav > ul {
+      padding-left: 0px; } }
+
+nav > ul > li > a {
+  width: auto;
+  padding: 10px 33px 15px 33px; }
+
+@media (max-width: 550px) {
+  nav [aria-haspopup="true"]::after {
+    display: none; } }
+
+nav a[aria-haspopup="true"]::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  top: 16px;
+  right: 15px;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid #fff; }
+
+nav > ul > li > a[aria-haspopup="true"]::after {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid #fff;
+  left: 20px;
+  right: auto;
+  bottom: 6px;
+  top: auto; }
+
+/*footer */
+footer {
+  font-size: 0.8em;
+  margin: 40px;
+  color: #4c4e4e;
+  white-space: nowrap; }
+
+footer .content {
+  display: inline; }
+
+footer a {
+  margin-left: 30px;
+  color: #4f4f4f; }
+
+footer a:visited {
+  color: #777; }
+
+footer a:hover {
+  color: #000; }
+
+/* basket */
+/* header  */
+/*  Section - All*/
+/*  Section - main - index.html ******** */
+/* product detail page */
+/* navigation */
+/* **************************************************************** */
+/*top level */
+/* footer */

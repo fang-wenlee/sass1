@@ -1,0 +1,202 @@
+nav {
+    @include navArea(rgba(0, 0, 0, 0.65));
+  
+    @include phone {
+      padding: 60px 15px 30px 15px;
+      background-color: $Header_BackGround_Color;
+      height: 0px;
+      overflow: hidden;
+    }
+  
+    // @include phone-small {
+    //   padding-top: 30px;
+    // }
+  }
+  
+  nav::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  
+  nav a.mobile_menu {
+    width: 32px;
+    height: 32px;
+    background: url(../images/site/icon_menu.svg) no-repeat 0 0;
+    background-size: contain;
+    position: absolute;
+    top: 9px;
+  
+    margin-left: 16px;
+    display: none;
+    @include phone {
+      display: block;
+      left: 78%;
+    }
+    @include phone-small {
+      left: 71%;
+    }
+  }
+  
+  nav ul,
+  nav ul ul,
+  nav ul ul ul {
+    @include phone {
+      display: block;
+      position: static;
+    }
+  }
+  
+  nav ul {
+    list-style: none;
+    // margin: 0;
+    // padding: 0;
+    @include tablet-portrait {
+      padding-left: 10px;
+    }
+    @include phone {
+      padding: 0;
+    }
+  }
+  nav > ul > li {
+    float: right;
+    @include phone {
+      float: none;
+    }
+  }
+  nav ul li:hover {
+    // background-color: $Header_BackGround_Color;
+    color: $Btn_Nav_H;
+    @include phone {
+      background: none;
+    }
+  }
+  
+  nav ul li:hover > ul {
+    display: block;
+  }
+  
+  nav ul li a {
+    display: inline-block;
+    color: $White;
+    padding: 10px 8px;
+    text-decoration: none;
+    width: 110px;
+    position: relative;
+  
+    @include phone {
+      width: auto;
+      display: block;
+      margin: 4px 10px;
+      padding: 6px 15px 6px 2px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    }
+  }
+  
+  nav ul li a:visited {
+    color: $White;
+  }
+  
+  nav ul li a:hover {
+    background-color: $Btn_Nav_Color;
+    @include phone {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+  
+  nav ul ul {
+    position: absolute;
+    top: 100%;
+    background-color: $Light_Yello_Green;
+    display: none;
+    @include phone {
+      background: none;
+      margin-left: 45px;
+      top: 50%;
+    }
+  }
+  
+  nav ul ul li {
+    position: relative;
+    margin-left: -25px;
+  }
+  nav ul ul li a {
+    @include phone {
+      margin-left: 30px;
+      margin-top: 20px;
+    }
+  }
+  // nav ul ul ul {
+  //   left: 100%;
+  //   top: 0px;
+  // }
+  
+  /*top level */
+  
+  nav > ul {
+    padding-left: 200px;
+    margin-right: 60px;
+    @include phone {
+      padding-left: 0px;
+    }
+  }
+  
+  nav > ul > li > a {
+    width: auto;
+    padding: 10px 33px 15px 33px;
+  }
+  
+  nav [aria-haspopup="true"]::after {
+    @include phone {
+      display: none;
+    }
+  }
+  nav a[aria-haspopup="true"]::after {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 0px;
+  
+    position: absolute;
+    top: 16px;
+    right: 15px;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid $White;
+  }
+  
+  nav > ul > li > a[aria-haspopup="true"]::after {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid $White;
+    left: 20px;
+    right: auto;
+    bottom: 6px;
+    top: auto;
+  }
+
+/*footer */
+  footer {
+    font-size: 0.8em;
+    margin: 40px;
+    color: $Dark_Grey;
+    white-space: nowrap;
+  }
+  
+  footer .content {
+    display: inline;
+  }
+  
+  footer a {
+    margin-left: 30px;
+    color: #4f4f4f;
+  }
+  
+  footer a:visited {
+    color: #777;
+  }
+  
+  footer a:hover {
+    color: #000;
+  }
+  

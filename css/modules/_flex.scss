@@ -1,0 +1,163 @@
+section.main .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+  
+    @include tablet-portrait {
+      justify-content: space-around;
+    }
+  }
+  
+  section.main .flex-container .flexbox-item {
+    @include phone-small {
+      height: 370px;
+      font-size: $Primary_FontSize;
+      flex: 0 0 85%;
+      // flex: 1;
+    }
+  }
+  section.main .flex-container #add-to-basket.onSale {
+    background-color: $Btn_Add_Color;
+    color: $White;
+    line-height: 22px;
+    border: 0px;
+    @include borderRadius(3px);
+  
+    @include phone-small {
+      line-height: 22px;
+      border-radius: 3px;
+      margin-top: 10px;
+      text-decoration: none;
+      color: $White;
+      border: 1px solid $White;
+      background-color: $Btn_Add_Color;
+      padding: 12px 20px;
+      transition: background-color 0.2s;
+    }
+  }
+  section.main .flex-container #add-to-basket.onSale:hover {
+    background-color: $Btn_Add_Color_H;
+  }
+  
+  section.main .flex-container > div {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: $Content_Background_Color;
+    border-bottom-right-radius: 35px;
+    margin: 10px;
+    padding: 10px;
+    font-size: 0.8em;
+    width: 12.6%;
+    height: 285px;
+  
+    @include desktop {
+      height: 296px;
+      width: 12%;
+    }
+  
+    @include tablet() {
+      width: 14%;
+    }
+    @include tablet-portrait {
+      height: 305px;
+      width: 17%;
+    }
+  
+    @include phone {
+      width: 38%;
+      border-bottom-right-radius: 20px;
+  
+      height: 260px;
+    }
+    @include phone-small {
+      flex-direction: row;
+    }
+  }
+  section.main .flex-container #test-on-sale {
+    font-weight: 600;
+    @include phone-small {
+      display: none;
+    }
+  }
+  section.main .flex-container #special,
+  main.product-page #special {
+    color: $Red;
+  }
+  section.main .flex-container #regular-sale {
+    font-weight: 600;
+    @include phone-small {
+      margin-left: 20px;
+      font-size: 24px;
+      font-weight: 600;
+    }
+  }
+  section.main .flex-container .out-of-stock {
+    margin-top: 10px;
+    width: 100px;
+    padding: 8px;
+    color: $Btn_Nav_H;
+    @include phone-small {
+      width: 200px;
+    }
+  }
+  section.main .flex-container .posts-detail {
+    height: 100px;
+    @include phone {
+      display: none;
+    }
+  }
+  section.main .flex-container .posts-img {
+    height: 90px;
+    overflow: hidden;
+    background-size: cover;
+    text-align: center;
+    @include phone {
+      height: 100px;
+      padding: 30px;
+    }
+    @include phone-small {
+      height: 170px;
+    }
+  }
+  section.main .flex-container .flexbox-item p.out-of-boxss {
+    color: $Content_Background_Color;
+  }
+  section.main .flex-container .flexbox-item a {
+    text-decoration: none;
+    margin-top: 30px;
+  }
+  section.main .flex-container .flexbox-item #goto-detail {
+    line-height: 160px;
+    color: transparent;
+  }
+  
+  section.main .flex-container .posts-img:hover {
+    opacity: 0.5;
+  }
+  section.main .flex-container .list-price-normal {
+    display: block;
+    @include desktop {
+      margin-top: 10px;
+    }
+  
+    @include tablet-portrait {
+      margin-top: 10px;
+    }
+    @include phone-small {
+      display: none;
+    }
+  }
+  section.main .flex-container .list-price-mobile {
+    display: none;
+    @include phone-small {
+      display: block;
+      margin-top: 10px;
+    }
+  }
+  
+  section.main .flex-container .content div > h3 a {
+    color: #000;
+    text-decoration: none;
+  }
+  section.main .flex-container .content div > h3 a:hover {
+    color: #65b1ff;
+  }
